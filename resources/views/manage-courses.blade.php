@@ -13,6 +13,13 @@
                 </div>
             </div>
 
+            @if(\Illuminate\Support\Facades\Session::has("success"))
+                <div class="alert-success">
+                    <span>{{ \Illuminate\Support\Facades\Session::get("success")  }}</span>
+                </div>
+            @endif
+
+
             <div class="manage-courses__list">
                 <div class="manage-courses__list-header">
                     <div class="manage-courses__list-header-item medium-block">Course name</div>

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin Panel</title>
 
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="/app.css">
 </head>
 <body class="guest-layout">
     @yield('content')
