@@ -92,10 +92,8 @@ class MemberAPIController extends Controller
     public function viewRegistrations() {
         $member = Auth::user();
 
-        $courseIDs = Registration::query()->where('member_id', $member->id)->get()->map(function($e) { return $e->id; });
-        $courses = Course::query()->orderBy('date_time', 'DESC')->whereIn("id", $courseIDs)->get();
-
-        return response()->json($courses)->setStatusCode(200);
+        $registrations = Registration::query()->where('member_id', $member->id)->get();
+        return response()->json($registrations)->setStatusCode(200);
     }
 
     public function registration(APIRegistrationRequest $request) {
